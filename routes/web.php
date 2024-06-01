@@ -19,7 +19,7 @@ Route::get('/', [FrontendIndexController::class, 'mainPage'])->name('main.page')
 
 //Routes For Admin Panel Start//
 
-Route::middleware(['admin_auth'])->prefix('ceo')->group(function () {
+Route::prefix('ceo')->group(function () {
 
     Route::get('/admin_sign_in', [BackendIndexController::class, 'adminRegister'])->name('admin.register.page');
     Route::post('/admin_sign_in', [BackendIndexController::class, 'adminSignIn'])->name('admin.sign.in');
@@ -107,14 +107,6 @@ Route::middleware(['admin_auth'])->prefix('ceo')->group(function () {
         Route::get('/delete/{id}', [ContactUsController::class, 'contact_usDelete'])->name('contact_us.delete');
     });
 
-    // Route::prefix('site_settings')->group(function () {
-    //     Route::get('/view', [SiteSettingController::class, 'siteSettingsView'])->name('site.settings.view');
-    //     Route::get('/store', [SiteSettingController::class, 'siteSettingsStore'])->name('site.settings.store');
-    //     Route::post('/store', [SiteSettingController::class, 'siteSettingsAdd'])->name('site.settings.add');
-    //     Route::get('/edit/{id}', [SiteSettingController::class, 'siteSettingsEdit'])->name('site.settings.edit');
-    //     Route::post('/edit/{id}', [SiteSettingController::class, 'siteSettingsUpdate'])->name('site.settings.update');
-    //     Route::get('/delete/{id}', [SiteSettingController::class, 'siteSettingsDelete'])->name('site.settings.delete');
-    // });
 
     Route::prefix('users')->group(function () {
         Route::get('/view', [UsersController::class, 'usersView'])->name('users.view');

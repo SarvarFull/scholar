@@ -117,7 +117,7 @@
                     <b>Users</b>
                 </a>
             </li>
-            <li class="mt-3">
+            {{-- <li class="mt-3">
                 <a href="{{ route('site.view') }}" class="nav-link link-body-emphasis">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-people-fill" viewBox="0 0 16 16">
@@ -126,7 +126,7 @@
                     </svg>
                     <b>Site Settings</b>
                 </a>
-            </li>
+            </li> --}}
         </div>
 
 
